@@ -1,0 +1,18 @@
+<mat-card>
+  <div [hidden]='view !== "dashboard"'>
+  <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayoutAlign="space-between stretch">
+    <div fxFlex="49.75" fxLayout="column" fxLayoutAlign="space-between stretch">
+      <executive-agedInvoices fxFlex="65" [(data)]="data" (lookupView)='lookupView($event)'></executive-agedInvoices>
+      <executive-borrowingBase fxFlex="33" [(data)]="data"></executive-borrowingBase>
+    </div>
+    <executive-bankingBalance fxFlex="49.75" [(data)]="data"></executive-bankingBalance>
+  </div>
+  </div>
+
+  <div [hidden]='view === "dashboard"'>
+    <button mat-icon-button style='float: right;' (click)="clearUrlParams()">
+      <mat-icon class="md-24">close</mat-icon>
+    </button>
+    <executive-lookup [(data)]="lookupData"></executive-lookup>
+  </div>
+</mat-card>

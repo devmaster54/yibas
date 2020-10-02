@@ -1,0 +1,17 @@
+<div class="sidenav">
+  <nav *ngFor="let menu of menus">
+    <!--<div>{{menu.url}}</div>-->
+
+    <h3 (click)="menu.collapse = !menu.collapse" class="navHeader">
+      <span>{{menu.sidenavLabel}}</span>
+      <mat-icon *ngIf="menu.collapse" class="float-right" (click)="menu.collapse.toggle()"> expand_more </mat-icon>
+      <mat-icon *ngIf="!menu.collapse" class="float-right" (click)="menu.collapse.toggle()"> expand_less </mat-icon>
+    </h3>
+    <ul [collapse]="menu.collapse" class="collapse">
+      <li *ngFor="let route of menu.routes">
+        <a (click)="navigateTo(route.url)" class="cursor-pointer">{{route.sidenavLabel}}</a>
+        <!--<a routerLink="{{route.url}}">{{route.sidenavLabel}}</a>-->
+      </li>
+    </ul>
+  </nav>
+</div>

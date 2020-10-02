@@ -1,0 +1,53 @@
+#login {
+  background-image: url("/img/global-header2.jpg");
+  background-size: cover;
+  height: 100vh;
+  text-align: center;
+  width: 100%;
+  padding-top: 100px;
+
+  h1{
+    color: white;
+    font-weight: normal;
+    font-size: 40px;
+    margin: 0;
+  }
+  .at-form {
+    border: none;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  @media (max-width: 1024px) {
+    .at-form {
+      border: none;
+      margin: 1rem auto 0;
+      max-width: 90vw;
+      padding: 1rem;
+    }
+  }
+
+  input {
+    background: #fff;
+    border: 0;
+    box-shadow: none;
+  }
+
+  label {
+    display: none;
+  }
+
+}
+
+.login-input {
+  font-size: 24px;
+  height: 48px;
+  line-height: 40px;
+  padding: 3px 12px;
+  width: 100%;
+}
+
+.login-button {
+  //background-color: $theme-color;
+  color: white;
+}

@@ -1,0 +1,82 @@
+mat-list mat-list-item {
+  height: 20px;
+}
+
+mat-list > h3 {
+  padding: 0 16px;
+  margin: 0;
+  //background-color: mat-color($candy-app-primary);;
+  height: 24px;
+  color: rgba(255, 255, 255, 0.87) !important;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.sidenav h3 {
+  padding: 0 16px;
+  margin: 0;
+  //background-color: $primary-color;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.87) !important;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.sidenav
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      margin: 0;
+      padding: 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    }
+  }
+
+.sidenav li > a:hover {
+  background: #fafafa;
+  color: #673ab7;
+}
+
+.sidenav li > a {
+  display: block;
+  padding: 1em;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.54);
+  transition: all .3s;
+}
+
+.collapse {
+  display: none;
+  //height: 0;
+  transition-timing-function: ease-out;
+}
+
+.in {
+  display: list-item;
+  //-moz-transition: height .5s;
+  //-ms-transition: height .5s;
+  //-o-transition: height .5s;
+  //-webkit-transition: height .5s;
+  //transition: height .5s;
+}
+
+.navHeader {
+  cursor: pointer;
+}
+
+.collapsing {
+  transition: height 1s;
+}
+
+
+body {
+  display: none !important;
+}
+
+

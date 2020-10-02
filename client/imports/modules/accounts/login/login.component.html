@@ -1,0 +1,30 @@
+<div id="login" fxLayout="row" fxLayoutAlign="center start">
+  <div layout="column" class="at-form"
+       [ngStyle.sm]="{'width': '80vw'}"
+       [ngStyle.md]="{'width': '60vw'}"
+       [ngStyle.lg]="{'width': '50vw'}"
+       [ngStyle.xl]="{'width': '40vw'}"
+  >
+    <h1 fxLayoutAlign="center center" style="padding: 20px;">
+      Sign In
+    </h1>
+
+    <div>
+      <form flex [formGroup]="loginForm" #f="ngForm" (ngSubmit)="login()" fxLayout="column" style="padding: 20px" fxLayoutAlign="center center">
+        <input class="login-input" name="email1" formControlName="email" ([ngModel])="password" type="email" placeholder="Email">
+        <br>
+        <input class="login-input" name="password1" formControlName="password" ([ngModel])="password" type="password" placeholder="Password">
+        <br>
+        <div *ngIf="!isSigning">
+          <!--<a mat-button [routerLink]="['/recover']">Forgot password?</a>-->
+          <button mat-raised-button color="primary" class="login-button" type="submit" aria-label="login">Sign In</button>
+        </div>
+        <div *ngIf="isSigning">
+          <mat-spinner [diameter]="'30'" class="app-spinner"></mat-spinner>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
+<simple-notifications [options]="options"></simple-notifications>
